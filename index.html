@@ -1,126 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body{
-            display: flex;
-            height: 100vh;
-        }
-        .container{
-            display: flex;
-            width: 100%;
-        }
-        .left{
-            flex: 0.9;
-            background: #00bcd4;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 40px;
-          border-bottom-right-radius: 20% 100% ;
-        }
-        .left h2{
-            margin-bottom: 12px;
-        }
-        .left p{
-            margin-bottom: 10px;
-            font-size: 14px;
-        }
-        .left button{
-            padding: 10px 20px;
-            border: none;
-            background: white;
-            color: #00bcd4;
-            cursor: pointer;
-            border-radius: 20px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .left img{
-            width: 120px;
-            margin-top: 20px;
-        }
-        .right{
-            flex: 0.9;
-            padding: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        
-        }
-        .form{
-            width: 200px;
-            text-align: center;
-        }
-        .form h2{
-            margin-bottom: 20px;
-        }
-        .form input{
-            width: 100%;
-            padding: 9px;
-            border: 1px solid;
-            border-radius: 30px;
-            margin: 9px 0;
-        }
-        .form button{
-            width: 100%;
-            padding: 10px;
-            border: none;
-            background: #00bcd4;
-            color: white;
-            cursor: pointer;
-            border-radius: 20px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        .social-login{
-            margin-top: 15px;
-            font-size: 20px;
-            margin: 20px 0;
-        }
-        .social-login a {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      display: flex;
+      height: 100vh;
+    }
+    .container{
+      display: flex;
+      width: 100%;
+    }
+    .left{
+      flex: 0.9;
+      background: #00bcd4;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      border-bottom-right-radius: 20% 100% ;
+      text-align: center;
+    }
+    .left h2{
+      margin-bottom: 12px;
+    }
+    .left p{
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .left button{
+      padding: 10px 20px;
+      border: none;
+      background: white;
+      color: #00bcd4;
+      cursor: pointer;
+      border-radius: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .left img{
+      width: 120px;
+      margin-top: 20px;
+    }
+    .right{
+      flex: 0.9;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .form{
+      width: 250px;
+      text-align: center;
+    }
+    .form h2{
+      margin-bottom: 20px;
+    }
+    .form input{
+      width: 100%;
+      padding: 9px;
+      border: 1px solid;
+      border-radius: 30px;
+      margin: 9px 0;
+    }
+    .form button{
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #00bcd4;
+      color: white;
+      cursor: pointer;
+      border-radius: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .social-login{
+      margin-top: 15px;
+      font-size: 20px;
+      margin: 20px 0;
+    }
+    .social-login a {
       margin: 0 8px;
       text-decoration: none;
       font-size: 20px;
       color: #00bcd4;
     }
-    </style>
+    @media (max-width: 768px) {
+      body {
+        height: auto;
+      }
+      .container {
+        flex-direction: column;
+        height: auto;
+      }
+      .left, .right {
+        flex: unset;
+        width: 100%;
+        border-radius: 0;
+        padding: 20px;
+      }
+      .left {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      .form {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <!-- left side -->
-         <div class="left">
-            <h2>New Here?</h2>
-            <p>Sign up now to get started!</p>
-            <button class="Sign-up">Sign Up</button>
-            <img src="https://cdn-icons-png.flaticon.com/512/4712/4712065.png" alt="tools icon">
-         </div>
-         <!-- rigth side -->
-          <div class="right">
-            <div class="form">
-                <h2>Sign In</h2>
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="password">
-                <button class="Sign-in">Login</button>
-                <div class="social-login">
+  <div class="container">
+    <div class="left">
+      <h2>New Here?</h2>
+      <p>Sign up now to get started!</p>
+      <button class="Sign-up">Sign Up</button>
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712065.png" alt="tools icon">
+    </div>
+    <div class="right">
+      <div class="form">
+        <h2>Sign In</h2>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <button class="Sign-in">Login</button>
+        <div class="social-login">
           <a href="#">🌐</a>
           <a href="#">f</a>
           <a href="#">G</a>
           <a href="#">in</a>
         </div>
-            </div>
-          </div>
+      </div>
     </div>
-    </div>
+  </div>
 </body>
 </html>
